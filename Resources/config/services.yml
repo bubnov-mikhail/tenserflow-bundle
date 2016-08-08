@@ -1,0 +1,4 @@
+services:
+    tenserflow.recognizer:
+        class: Bubnov\TensorFlowBundle\Service\TenserFlowRecognizer
+        arguments: ["tenserflow.binary", "tenserflow.graph", "tenserflow.labels"]

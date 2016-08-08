@@ -1,0 +1,23 @@
+{
+    "name": "bubnovKelnik/tensorflow-bundle-binaries",
+    "version": "0.1.0",
+    "license": "MIT",
+    "extra": {
+        "platform-specific-packages": {
+            "bubnovKelnik/tensorflow-bundle-binaries-0.1.0": [
+                {"bubnovKelnik/tensorflow-bundle-binaries-linux64": "dev-master", "os": "linux", "architecture": "x64"}
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type":"package",
+            "package":{
+                "name":"bubnovKelnik/tensorflow-bundle-binaries-linux64",
+                "version":"dev-master",
+                "bin": ["image_label", "graph.pb"],
+                "dist":{"url":"empty", "type":"tar" }
+            }
+        }
+    ]
+}
