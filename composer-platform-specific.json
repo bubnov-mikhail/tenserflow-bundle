@@ -15,6 +15,7 @@
             "package":{
                 "name":"bubnovKelnik/tensorflow-bundle-binaries-linux64",
                 "version":"dev-master",
+                "bin": ["label_image", "graph.pb", "labels.txt"],
                 "dist":{"url":"https://github.com/bubnovKelnik/tensorflow-bundle-binaries/releases/download/1.0.0/tensorflow-bundle-binaries-1.0.0-linux-64bit.tar.gz", "type":"tar" }
             }
         }
