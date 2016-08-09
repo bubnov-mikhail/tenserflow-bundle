@@ -15,7 +15,7 @@ class Dictionary
      */
     public function add($word)
     {
-        $this->words[] = $words;
+        $this->words[] = $word;
 
         return $this;
     }
