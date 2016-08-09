@@ -1,6 +1,6 @@
 {
     "name": "bubnovKelnik/tensorflow-bundle-binaries",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "license": "MIT",
     "extra": {
         "platform-specific-packages": {
@@ -15,7 +15,7 @@
             "package":{
                 "name":"bubnovKelnik/tensorflow-bundle-binaries-linux64",
                 "version":"dev-master",
-                "bin": ["image_label", "graph.pb"],
+                "bin": ["label_image", "graph.pb", "labels.txt", "LICENSE"],
                 "dist":{"url":"https://github.com/bubnovKelnik/tensorflow-bundle-binaries/releases/download/1.0.0/tensorflow-bundle-binaries-1.0.0-linux-64bit.tar.gz", "type":"tar" }
             }
         }
