@@ -8,7 +8,7 @@ class RecognizerResult
 {
     /**
      *
-     * @var Array of Label
+     * @var array of Label
      */
     private $labels = [];
 
@@ -38,7 +38,7 @@ class RecognizerResult
 
     /**
      *
-     * @return Array
+     * @return array
      */
     public function getLabels()
     {
@@ -48,7 +48,7 @@ class RecognizerResult
     /**
      *
      * @param float $scoreThreshold
-     * @return Array
+     * @return array
      */
     public function getLabelsScored($scoreThreshold)
     {
@@ -64,11 +64,10 @@ class RecognizerResult
     }
 
     /**
-     * @return String
+     * @return string
      */
     public function __toString()
     {
         return implode($this->labels, "\n");
     }
 }
-

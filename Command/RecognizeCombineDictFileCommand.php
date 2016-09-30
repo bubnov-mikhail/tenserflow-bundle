@@ -17,8 +17,8 @@ class RecognizeCombineDictFileCommand extends ContainerAwareCommand
     {
         $this
             ->setName('bubnov_tensorflow:combine_dict')
-            ->addOption('tmpdict', null, InputOption::VALUE_OPTIONAL, 'Full path to temp dictionary file' , '/tmp/tensorFlowBundle.tmp.dict')
-            ->addOption('dict', null, InputOption::VALUE_OPTIONAL, 'Full path to dictionary file to create' , '/tmp/tensorFlowBundle.dict')
+            ->addOption('tmpdict', null, InputOption::VALUE_OPTIONAL, 'Full path to temp dictionary file', '/tmp/tensorFlowBundle.tmp.dict')
+            ->addOption('dict', null, InputOption::VALUE_OPTIONAL, 'Full path to dictionary file to create', '/tmp/tensorFlowBundle.dict')
             ->setDescription("Add labels to the temporary dictionary file\n")
         ;
     }

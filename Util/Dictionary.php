@@ -8,9 +8,10 @@ use Bubnov\TensorFlowBundle\Util\RecognizerResult;
 class Dictionary
 {
     private $words = [];
+    
     /**
      *
-     * @param String $words
+     * @param string $words
      * @return \Bubnov\TensorFlowBundle\Util\Dictionary
      */
     public function add($word)
@@ -54,4 +55,3 @@ class Dictionary
         return false;
     }
 }
-

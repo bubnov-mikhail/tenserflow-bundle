@@ -21,21 +21,22 @@ class TenserFlowRecognizer
     
     /**
      *
-     * @var String path to graph.pb
+     * @var string path to graph.pb
      */
     private $graph;
 
     /**
      *
-     * @var String path to labels.txt
+     * @var string path to labels.txt
      */
     private $labels;
 
     /**
      *
-     * @param String $binDir
+     * @param string $binDir
      */
-    public function __construct($binary, $graph, $labels) {
+    public function __construct($binary, $graph, $labels)
+    {
         $this
             ->testFilePath($binary, true)
             ->testFilePath($graph)
@@ -67,10 +68,11 @@ class TenserFlowRecognizer
     /**
      *
      * @param File | string $file
-     * @return String
+     * @return string
      * @throws \RuntimeException
      */
-    private function getFilePath($file) {
+    private function getFilePath($file)
+    {
         if ($file instanceof File) {
             return $file->getPath().'/'.$file->getBasename();
         } elseif (is_string($file)) {
@@ -82,12 +84,13 @@ class TenserFlowRecognizer
 
     /**
      *
-     * @param String $filePath
-     * @param Boolean $mustBeExecutable
+     * @param string $filePath
+     * @param boolean $mustBeExecutable
      * @return \Bubnov\TensorFlowBundle\Service\TenserFlowRecognizer
      * @throws \RuntimeException
      */
-    private function testFilePath($filePath, $mustBeExecutable = false) {
+    private function testFilePath($filePath, $mustBeExecutable = false)
+    {
         if (!file_exists($filePath) || !is_file($filePath)) {
             throw new \RuntimeException(__METHOD__ . ': there is no file in ' . $filePath);
         }
@@ -105,10 +108,11 @@ class TenserFlowRecognizer
 
     /**
      *
-     * @param String $file
+     * @param string $file
      * @return \Symfony\Component\Process\Process
      */
-    private function getProcess($file) {
+    private function getProcess($file)
+    {
         $cmd = sprintf(
             self::COMMAND_TEMPLATE,
             $this->binary,
@@ -125,10 +129,11 @@ class TenserFlowRecognizer
 
     /**
      *
-     * @param String $response
+     * @param string $response
      * @return \Bubnov\TensorFlowBundle\Service\RecognizerResult
      */
-    private function generateResult($response) {
+    private function generateResult($response)
+    {
         $result = new RecognizerResult();
         foreach (explode("\n", $response) as $line) {
             if (!$label = $this->generateLabel($line)) {
@@ -143,10 +148,11 @@ class TenserFlowRecognizer
 
     /**
      *
-     * @param String $line
+     * @param string $line
      * @return Label
      */
-    private function generateLabel($line) {
+    private function generateLabel($line)
+    {
         if (empty($line)) {
             return null;
         }

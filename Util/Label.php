@@ -6,7 +6,7 @@ class Label
 {
     /**
      *
-     * @var String
+     * @var string
      */
     private $name;
 
@@ -18,17 +18,18 @@ class Label
 
     /**
      *
-     * @param String $name
+     * @param string $name
      * @param float $score
      */
-    public function __construct($name, $score) {
+    public function __construct($name, $score)
+    {
         $this->name = $name;
         $this->score = $score;
     }
 
     /**
      *
-     * @return String
+     * @return string
      */
     public function getName()
     {
@@ -45,11 +46,10 @@ class Label
     }
 
     /**
-     * @return String
+     * @return string
      */
     public function __toString()
     {
         return $this->name . ' (' . $this->score . ')';
     }
 }
-

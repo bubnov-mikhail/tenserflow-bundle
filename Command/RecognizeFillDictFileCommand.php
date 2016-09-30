@@ -18,7 +18,7 @@ class RecognizeFillDictFileCommand extends ContainerAwareCommand
         $this
             ->setName('bubnov_tensorflow:fill_dict')
             ->addArgument('image', InputArgument::REQUIRED, 'Full image path')
-            ->addOption('tmpdict', null, InputOption::VALUE_OPTIONAL, 'Full path to temp dictionary file' , '/tmp/tensorFlowBundle.tmp.dict')
+            ->addOption('tmpdict', null, InputOption::VALUE_OPTIONAL, 'Full path to temp dictionary file', '/tmp/tensorFlowBundle.tmp.dict')
             ->setDescription("Add labels to the temporary dictionary file\n")
         ;
     }
