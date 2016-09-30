@@ -7,36 +7,27 @@ Both will return RecognizeResult object.
 ### Requirements
 
 - PHP 5.4 or higher
-- symfony 2.3
+- symfony > 2.3 
 
 
 ### Installation
 
-To install BubnovTensorFlowBundle with Composer just add the following to your 'composer.json' file:
+To install bubnov/tenserflow-bundle with Composer just add the following to your 'composer.json' file:
 
     {
-        require: {
-            "bubnovKelnik/tensorflow-bundle": "*",
-            ...
-        },
         ...
         "scripts": {
             "post-install-cmd": [ "TensorFlowBinaryInstaller::install" ],
             "post-update-cmd":  [ "TensorFlowBinaryInstaller::update" ]
         },
         ...
-        repositories: [
-            {
-                "type": "vcs",
-                "url":  "git@github.com:bubnovKelnik/tenserflow-bundle.git"
-            },
-            ...
-        ]
     }
 
-The next thing you should do is install the bundle by executing the following command:
+The next thing you should do is to install the bundle by executing the following command:
 
-    php composer.phar update bubnovKelnik/tensorflow-bundle
+    ```sh
+    composer require bubnov/tenserflow-bundle: ~3.0
+    ```
 
 Finally, add the bundle to the registerBundles function of the AppKernel class in the 'app/AppKernel.php' file:
 

@@ -1,7 +1,7 @@
 {
-    "name": "bubnovKelnik/tenserflow-bundle",
+    "name": "bubnov/tenserflow-bundle",
     "type": "symfony-bundle",
-    "description": "Integrates tenserflow recognizer into your Symfony2 application",
+    "description": "Integrates tenserflow recognizer into your Symfony2/Symfony3 application",
     "keywords": ["bundle", "tenserflow", "recognizer", "image"],
     "homepage": "https://github.com/bubnovKelnik/tenserflow-bundle",
     "license": "MIT",
@@ -13,7 +13,8 @@
         "post-update-cmd":  [ "TensorFlowBinaryInstaller::update" ]
     },
     "require": {
-        "php": ">=5.5"
+        "php": ">=5.5",
+        "symfony/symfony": ">=2.3"
     },
     "autoload": {
         "psr-4": {
@@ -23,7 +24,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.x.x-dev"
+            "dev-master": "3.x-dev"
         }
     }
 }
