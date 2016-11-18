@@ -71,15 +71,15 @@ Command will return multiline string with labels and scores
 
 To create dictionary with common labels to the same images in some directory, you can call:
 
-    find /path/to/dir/with/images -type f | parallel ./app/console bubnov_tensorflow:fill_dict {} --tmpdict /path/to/dict.tmp
+    find /path/to/dir/with/images -type f | parallel ./bin/console bubnov_tensorflow:fill_dict {} --tmpdict /path/to/dict.tmp
 
 This command using GNU parallel. Optional --tmpdict may be omitted - temporary dict file will be saved to /tmp/tensorFlowBundle.dict.tmp
 After complete, call:
 
-    app/console bubnov_tensorflow:combine_dict --tmpdict /path/to/dict.tmp --dict /path/to/complete.dict
+    bin/console bubnov_tensorflow:combine_dict --tmpdict /path/to/dict.tmp --dict /path/to/complete.dict
 
 This command will create dictionary with labels and the number of their repetitions in the dict.tmp file.
-Now you may choose, with labels to include in Dictionary.
+Now you may choose, which labels to include in Dictionary.
 Optional --dict may be omitted - dict file will be saved to /tmp/tensorFlowBundle.dict
 Optional --tmpdict may be omitted - temporary dict file will be read from /tmp/tensorFlowBundle.dict.tmp
 
