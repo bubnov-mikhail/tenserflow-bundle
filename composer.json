@@ -3,10 +3,10 @@
     "type": "symfony-bundle",
     "description": "Integrates tenserflow recognizer into your Symfony2/Symfony3 application",
     "keywords": ["bundle", "tenserflow", "recognizer", "image"],
-    "homepage": "https://github.com/bubnovKelnik/tenserflow-bundle",
+    "homepage": "https://github.com/bubnov-mikhail/tenserflow-bundle",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/bubnovKelnik/tenserflow-bundle/issues"
+        "issues": "https://github.com/bubnov-mikhail/tenserflow-bundle/issues"
     },
     "scripts": {
         "post-install-cmd": [ "TensorFlowBinaryInstaller::install" ],
